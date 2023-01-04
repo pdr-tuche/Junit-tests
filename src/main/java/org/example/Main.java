@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.classes.Calculadora;
+import org.example.classes.Funcionario;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,5 +19,11 @@ public class Main {
                         "resultado da divisao => %f\n" +
                         "resultado da paridade => %s\n",
                 resSoma, resSub, resMult, resDiv, pair);
+
+        Funcionario funcionario = new Funcionario("Pedro", 2_000);
+        System.out.printf("salario atual do %s é de: %f\n", funcionario.getNome(), funcionario.getSalario());
+        funcionario.aumentarSalario(6);
+        System.out.printf("salario pós aumento do %s é de: %f\n", funcionario.getNome(), funcionario.getSalario());
+
     }
 }
